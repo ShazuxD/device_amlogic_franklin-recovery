@@ -29,7 +29,12 @@ on post-fs-data
     chown system system /sys/class/android_usb/android0/f_rndis/ethaddr
     chmod 0660 /sys/class/android_usb/android0/f_rndis/ethaddr
 
+service ethup /system/bin/sh /system/bin/ethup.sh
+    oneshot
+    seclabel u:r:recovery:s0
+
 on boot
+    start ethup
     start systemcontrol
     mkdir /udisk
     mkdir /dev/usb-ffs 0770 system system
