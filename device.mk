@@ -1,5 +1,23 @@
 LOCAL_PATH := device/jio/franklin
 
+# Characteristics
+PRODUCT_CHARACTERISTICS := tv,nosdcard
+
+# Device specific props
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.platform.is.tv=1 \
+    ro.vendor.platform.has.mbxuimode=true \
+    ro.vendor.platform.has.realoutputmode=true \
+    ro.vendor.platform.hdmi.device_type=4 \
+    ro.vendor.platform.need.display.hdmicec=true \
+    ro.hdmi.device_type=4 \
+    ro.surface_flinger.max_graphics_width=1920 \
+    ro.surface_flinger.max_graphics_height=1080 \
+    ro.sf.lcd_density=320 \
+    vendor.afbcd.enable=1 \
+    ro.vendor.sdr2hdr.enable=true \
+    persist.vendor.sys.framerate.priority=true
+
 # Dynamic
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
