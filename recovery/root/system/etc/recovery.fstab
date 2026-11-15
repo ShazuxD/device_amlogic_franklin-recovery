@@ -4,14 +4,14 @@ vendor               /vendor                ext4    ro,barrier=1                
 product              /product               ext4    ro,barrier=1                                                    wait,logical
 odm                  /odm                   ext4    ro,barrier=1                                                    wait,logical
 
-/dev/block/oem       /oem                   ext4    ro,barrier=1                                                    wait
-/dev/block/metadata  /metadata              ext4    noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic   wait,check,formattable
-/dev/block/data      /data                  ext4    noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic   wait,check,quota,formattable,reservedsize=32M
-/dev/block/odm_ext   /mnt/vendor/odm_ext    ext4    ro,noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic  wait,check
-/dev/block/cache     /cache                 ext4    noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic   wait,check,formattable
-/dev/block/param     /mnt/vendor/param      ext4    noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic   wait,check,quota,formattable
-/dev/block/tee       /mnt/vendor/tee        ext4    noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic   wait,check,formattable
-/dev/block/factory   /mnt/vendor/factory    vfat    noatime,nodiratime,nosuid,noexec,dmask=0022                     wait,check
-/dev/block/misc      /misc                  emmc    defaults                                                        defaults
-/dev/block/boot      /boot                  emmc    defaults                                                        defaults
-/dev/block/recovery  /recovery              emmc    defaults                                                        defaults
+/dev/block/by-name/oem       /oem                   ext4    ro,barrier=1                                                    wait
+/dev/block/by-name/metadata  /metadata              ext4    noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic   wait,check,formattable
+/dev/block/by-name/data      /data                  ext4    noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic   wait,check,quota,formattable,reservedsize=32M
+/dev/block/by-name/odm_ext   /odm_ext               ext4    ro,noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic  wait,check
+/dev/block/by-name/cache     /cache                 ext4    noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic   wait,check,formattable
+/dev/block/by-name/param     /param                 ext4    noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic   wait,check,quota,formattable
+/dev/block/by-name/tee       /tee                   ext4    noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic   wait,check,formattable
+/dev/block/by-name/factory   /factory               vfat    noatime,nodiratime,nosuid,noexec,dmask=0022                     wait,check
+/dev/block/by-name/misc      /misc                  emmc    defaults                                                        defaults
+/dev/block/by-name/boot      /boot                  emmc    defaults                                                        defaults
+/dev/block/by-name/recovery  /recovery              emmc    defaults                                                        defaults
