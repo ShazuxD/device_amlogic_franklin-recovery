@@ -1,9 +1,10 @@
-# TWRP device tree for JioSTB (franklin) JHSD200
+# TWRP device tree for Amlogic (franklin) (s905x2) dynamic partitions
 
-TWRP device tree for the **Jio Set-Top Box (codename `franklin`, model JHSD200)**.
+TWRP device tree for the **Amlogic Box (codename `franklin`, model g12a_u212)**.
 
 > **Status: work in progress.**
-> Tested only on **JHSD200 V3**, firmware **11.3.46**, flashed with `dd` from the Android shell.
+> Tested on **JHSD200 V3** using D200 `kernel` , firmware **11.3.46**, flashed with `dd` from the Android shell.
+> Tested on **JHSB200 V5** using B200 `kernel` , firmware **11.3.46**. flashed with `dd` from the Android shell.
 > Fastboot and any other flashing method are **not tested and not recommended**.
 
 
@@ -28,11 +29,12 @@ TWRP device tree for the **Jio Set-Top Box (codename `franklin`, model JHSD200)*
 
 | | |
 |---|---|
-| Device | JioSTB (JHSD200) |
+| Device | Amlogic SOC |
 | Codename | `franklin` |
 | Branch | `android-11` |
+| Board  | `g12a_u212` |
 | Recovery | TWRP 3.7.0 (Android 11 tree) |
-| Tested on | JHSD200 V3, firmware 11.3.46 |
+| Tested on | JHSD200 V3/ JHSB200 V5, firmware 11.3.46 |
 
 ## Features
 
@@ -45,7 +47,7 @@ TWRP device tree for the **Jio Set-Top Box (codename `franklin`, model JHSD200)*
 | ADB-tcp | ✅ |
 | MTP | ⬜ |
 | Backup / restore | ⬜ |
-| Flashing zips | Do not flash any zips! |
+| Flashing zips | ✅ (flashed `update.zip` |
 | Decryption | ✅ (already decrypted) |
 
 ## ADB tcp (with ethernet cable)
@@ -95,4 +97,5 @@ dd if=/sdcard/recovery.img of=/dev/block/by-name/recovery
 - Work in progress: only the `dd` flashing path is verified.
 - Framebuffer(1920,2160) is hardcoded, with default 480p60hz resolution framebuffer downscales recovery causing glyps.
 - Custom Black and White theme as workaround for framebuffer issue
-- AVB verity is not tested so do not flash any zip in recovery
+- ~~AVB verity is not tested so do not flash any zip in recovery~~
+- AVB verity can be disabled with vbmeta

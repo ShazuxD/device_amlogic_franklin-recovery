@@ -1,4 +1,4 @@
-LOCAL_PATH := device/jio/franklin
+LOCAL_PATH := device/amlogic/franklin
 
 # Characteristics
 PRODUCT_CHARACTERISTICS := tv,nosdcard

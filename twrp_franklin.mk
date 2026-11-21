@@ -7,11 +7,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 # Inherit from franklin
-$(call inherit-product, device/jio/franklin/device.mk)
+$(call inherit-product, device/amlogic/franklin/device.mk)
 
 ## Device identifier.
 PRODUCT_DEVICE := franklin
 PRODUCT_NAME := twrp_franklin
-PRODUCT_BRAND := Jio
+PRODUCT_BRAND := Amlogic
 PRODUCT_MODEL := JHSD200
-PRODUCT_MANUFACTURER := Jio
+PRODUCT_MANUFACTURER := Amlogic

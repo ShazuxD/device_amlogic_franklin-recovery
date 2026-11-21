@@ -1,4 +1,4 @@
-DEVICE_PATH := device/jio/franklin
+DEVICE_PATH := device/amlogic/franklin
 
 # build broken flags
 ALLOW_MISSING_DEPENDENCIES := true
